@@ -24,14 +24,9 @@ class JsQueue {
     size(){
         return this.list.length;
     }
-    //To get the first item from the Queue
-    peek(){
-        if(!this.isEmpty()){
-            return this.list[0];
-        }
-        return null
 
-    }
+
+    //Print all numbers in the queue
     printQueue(){
         console.log(this.list.toString());
 
@@ -42,4 +37,6 @@ class JsQueue {
 const queue = new JsQueue();
 
 queue.enequeue(10);
-console.log(queue.size());
+queue.enequeue(20);
+console.log("The size of the Queue is: " + queue.size());
+console.log(queue.printQueue())
