@@ -28,7 +28,7 @@ class JsQueue {
 
     //Print all numbers in the queue
     printQueue(){
-        console.log(this.list.toString());
+        console.log("The Items in the Queue are: " + this.list.toString());
 
     }
 
@@ -36,7 +36,13 @@ class JsQueue {
 
 const queue = new JsQueue();
 
-queue.enequeue(10);
-queue.enequeue(20);
-console.log("The size of the Queue is: " + queue.size());
-console.log(queue.printQueue())
+queue.enequeue(3);
+queue.enequeue(2);
+queue.enequeue(1);
+queue.printQueue();
+console.log("This Item is being removed:" + queue.dequeue());
+console.log("The Size of the Queue is: " + queue.size());
+queue.printQueue();
+console.log("This Item is being removed:" + queue.dequeue());
+console.log("The Size of the Queue is: " + queue.size());
+queue.dequeue();
